@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signInstart } from '../redux/user/userSlice.js';
 import { signInSuccess } from '../redux/user/userSlice.js';
 import { signInFailure } from '../redux/user/userSlice.js';
+import OAuth from '../components/Oauth.jsx';
 export default function signin() {
   const[formData,setFormData]=useState({})
   const{loading,error}=useSelector((state)=>state.user);
@@ -51,7 +52,7 @@ export default function signin() {
       <input type="email" placeholder="email" className="border p-3 rounded-lg" id="email" onChange={handleChange}/>
       <input type="password" placeholder="password" className="border p-3 rounded-lg" id="password" onChange={handleChange}/>
       <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:bg-opacity-80'onClick={handleSubmit.navi}>{loading?'Loading..' : 'Sign In'}</button>
-    
+      <OAuth/>
     </form>
     <div className="flex gap-2 mt-5">
 <p>Dont have an account?</p>

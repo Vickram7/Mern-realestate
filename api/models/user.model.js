@@ -13,7 +13,12 @@ const userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:true,
+    },
+    avatar:{
+        type:String,
+        default:"https://www.iprcenter.gov/image-repository/blank-profile-picture.png/@@images/image.png",
     }
+
 },{timestamps:true});
 const User = mongoose.model('User',userSchema);
 export default User;
