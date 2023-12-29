@@ -8,9 +8,9 @@ import Header from './components/Header';
 export default function App() {
   return(
     <BrowserRouter>
-    <Header />
+    <Header/>
     <Routes>
-      <Route path='/' element={home()} />
+      <Route path="/home" element={home()} />
       <Route path="/signin" element={signin()} />
       <Route path="/signup" element={signup()} />
       <Route path="/about" element={about()} />
@@ -18,4 +18,5 @@ export default function App() {
     </Routes>
     </BrowserRouter>
     );
+
 }
